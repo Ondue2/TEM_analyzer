@@ -10,5 +10,7 @@ The position update will be a discrete pixel unit update.
 Only rectangular-type unit cells will be supported.
 A few hours will be needed to analyze around 1,000 atoms.
 
+Please contact sangeon.lee@fsu.edu if you have any questions.
+
 
 
