@@ -1,6 +1,8 @@
 # TEM_analyzer
 Tool for TEM image analysis
 
+Atomic position and amplitude are analyzed by fitting with the Gaussian functions.
+
 Python code.
 
 numpy, matplotlib, tensorflow, ipywidgets, and hyperspy.api modules are required.
