@@ -417,7 +417,7 @@ def Lattice_optimization_results(base_dir, lattice_atom_positions_file_name, par
 
     im_shape = im_analyzed.shape
     
-    lattice_atom_positions = list(np.load(lattice_atom_positions_file_name + ".npy", allow_pickle=True))
+    lattice_atom_positions = list(np.load(base_dir + lattice_atom_positions_file_name + ".npy", allow_pickle=True))
     
     x_l = lattice_atom_positions[0]
     y_l = lattice_atom_positions[1]
