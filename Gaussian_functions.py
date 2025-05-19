@@ -199,7 +199,7 @@ def Gaussian_draw_high_resol(wa_pix_posit, wa_params, figsize, first_position: l
 
         accul += len(wa_pix_posit[i]) 
 
-    positions = positions - np.tile(positions[:,0,np.newaxis], (1,12)) + np.tile(np.array(first_position)[:,np.newaxis], (1,12)) 
+    positions = positions - np.tile(positions[:,0,np.newaxis], (1,12)) + np.tile(np.array(first_position)[:,np.newaxis], (1,total_num)) 
     params[1,:] = params[1,:]*resol_amp
 
     highresol_positions = positions*resol_amp
