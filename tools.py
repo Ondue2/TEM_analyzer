@@ -5,8 +5,6 @@ Created on Mon Oct 28 14:24:15 2024
 @author: Admin
 """
 
-# This is the class for the image rotation and clip
-
 import numpy as np
 import math
 from matplotlib.patches import Rectangle
@@ -17,6 +15,8 @@ import ipywidgets as widgets
 from ipywidgets import interact
 import copy
 import Gaussian_functions as gf
+
+# This is the class for the image rotation and clip
 
 class im_process():
     def __init__(self, image):
@@ -251,7 +251,7 @@ def image_preprocess(TEM_array, rotate_angle, normalized_maximum_intensity, low_
     tf_im_analyzed = tf.convert_to_tensor(im_analyzed, dtype=tf.float32)       # For the futrue use with tensorflow
     
     plt.figure()
-    plt.title("Rotated TEM image", pad = 20)
+    plt.title("Rotated TEM image")
     plt.imshow(rotated_im , cmap = "grey")
     plt.gca().add_patch(rect)
 
@@ -281,7 +281,7 @@ def lattice_gen_check(x, y, x_off, y_off, len_pix, row, col, sliding, im_analyze
     plt.gca().add_collection(collection)
     
     fig, ax = plt.subplots(row, col)
-    fig.suptitle("TEM images of each unit cell")
+    fig.suptitle("TEM image with the unit cell grid")
     
     m = 0
     
@@ -296,7 +296,7 @@ def lattice_gen_check(x, y, x_off, y_off, len_pix, row, col, sliding, im_analyze
         horizon = int(horizon)
         vertical = int(vertical)
         fig, ax = plt.subplots(1, 3, figsize = (10, 5))
-        fig.suptitle("TEM image of average unit cell and intensity investigator")
+        fig.suptitle("TEM image of the average unit cell and intensity investigators")
         ax[0].imshow(sum_image, cmap = "grey")
         ax[0].axhline(y = horizon, color = 'red', linewidth = 1)
         ax[0].axvline(x = vertical, color = 'blue', linewidth = 1)
@@ -321,7 +321,7 @@ def atom_positions_iu_gen_check(Atom_positions_dic, sum_image, x, y, len_pix):
     atom_num_list = [len(posit_pix[i]) for i in range(atom_type_num)]
     
     plt.figure()
-    plt.title("Atomic position looks vaild?", pad = 15)
+    plt.title("Atomic positions look vaild?", pad = 15)
     plt.imshow(sum_image, cmap = "gray")
     
     for atom in range(len(posit_pix)):
