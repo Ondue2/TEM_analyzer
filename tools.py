@@ -513,7 +513,7 @@ def boundary_cut(atom_resolved_positions, atom_resolved_params, row, col, cut_ro
 
         atoms_in_row = col*atoms_in_lattice
 
-        for i in range(row):
+        for i in range(row - 2*cut_row):
     
             cut_col_indices_list.append(np.arange(i*atoms_in_row, i*atoms_in_row + cut_col*atoms_in_lattice))
             cut_col_indices_list.append(np.arange((i+1)*atoms_in_row - cut_col*atoms_in_lattice, (i+1)*atoms_in_row))
